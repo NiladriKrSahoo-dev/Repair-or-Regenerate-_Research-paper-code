@@ -1,0 +1,106 @@
+\begin{table}[t]
+\centering\small
+\caption{Repair vs.\ fresh regeneration on original code, all runs (paired by function; CI by bootstrap over functions; Wilcoxon signed-rank).}
+\label{tab:main-original}
+\begin{tabular}{lrrrrr}
+\toprule
+Measure & Repair & Regen. & $\Delta$ (R$-$G) & 95\% CI & $p$ \\
+\midrule
+Mutation score (all attempts) & 0.597 & 0.636 & -0.039 & [-0.116, +0.028] & 0.332 \\
+Branch coverage (all attempts) & 0.867 & 0.894 & -0.027 & [-0.069, +0.000] & 0.180 \\
+Validity rate & 0.700 & 0.762 & -0.062 & [-0.150, +0.013] & 0.160 \\
+Executability rate & 0.900 & 0.925 & -0.025 & [-0.062, +0.000] & 0.157 \\
+Tokens used & 2651.975 & 2076.037 & +575.938 & [+205.103, +997.990] & 0.008 \\
+Model calls & 2.875 & 3.350 & -0.475 & [-1.163, +0.212] & 0.169 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\caption{As above, restricted to runs whose shared initial candidate failed validation (original code; 36 runs).}
+\label{tab:fail-original}
+\begin{tabular}{lrrrrr}
+\toprule
+Measure & Repair & Regen. & $\Delta$ (R$-$G) & 95\% CI & $p$ \\
+\midrule
+Mutation score (all attempts) & 0.359 & 0.453 & -0.094 & [-0.250, +0.046] & 0.308 \\
+Branch coverage (all attempts) & 0.769 & 0.818 & -0.049 & [-0.125, +0.000] & 0.180 \\
+Validity rate & 0.386 & 0.545 & -0.159 & [-0.341, +0.023] & 0.083 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\caption{Repair vs.\ fresh regeneration on renamed code, all runs (paired by function; CI by bootstrap over functions; Wilcoxon signed-rank).}
+\label{tab:main-renamed}
+\begin{tabular}{lrrrrr}
+\toprule
+Measure & Repair & Regen. & $\Delta$ (R$-$G) & 95\% CI & $p$ \\
+\midrule
+Mutation score (all attempts) & 0.577 & 0.642 & -0.064 & [-0.133, -0.008] & 0.066 \\
+Branch coverage (all attempts) & 0.838 & 0.841 & -0.003 & [-0.041, +0.034] & 0.785 \\
+Validity rate & 0.662 & 0.738 & -0.075 & [-0.150, -0.013] & 0.034 \\
+Executability rate & 0.900 & 0.912 & -0.013 & [-0.050, +0.025] & 0.564 \\
+Tokens used & 2774.250 & 2235.637 & +538.612 & [+177.725, +921.130] & 0.012 \\
+Model calls & 2.812 & 3.538 & -0.725 & [-1.325, -0.175] & 0.017 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\caption{As above, restricted to runs whose shared initial candidate failed validation (renamed code; 38 runs).}
+\label{tab:fail-renamed}
+\begin{tabular}{lrrrrr}
+\toprule
+Measure & Repair & Regen. & $\Delta$ (R$-$G) & 95\% CI & $p$ \\
+\midrule
+Mutation score (all attempts) & 0.292 & 0.460 & -0.168 & [-0.327, -0.032] & 0.066 \\
+Branch coverage (all attempts) & 0.707 & 0.734 & -0.027 & [-0.136, +0.054] & 0.593 \\
+Validity rate & 0.326 & 0.522 & -0.196 & [-0.370, -0.043] & 0.034 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\caption{Effect of local-variable renaming on all-attempt mutation score (original $-$ renamed; paired by function).}
+\label{tab:rename}
+\begin{tabular}{lrrrr}
+\toprule
+Policy & Original & Renamed & $\Delta$ & 95\% CI \\
+\midrule
+repair & 0.597 & 0.577 & +0.020 & [-0.072, +0.111] \\
+regenerate & 0.636 & 0.642 & -0.005 & [-0.092, +0.083] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\caption{Stopping reasons per trajectory.}
+\label{tab:stops}
+\begin{tabular}{lllr}
+\toprule
+Code & Policy & Stop reason & Runs \\
+\midrule
+original & regenerate & budget & 8 \\
+original & regenerate & initial\_pass & 44 \\
+original & regenerate & max\_calls & 11 \\
+original & regenerate & pass & 17 \\
+original & repair & budget & 23 \\
+original & repair & initial\_pass & 44 \\
+original & repair & max\_calls & 1 \\
+original & repair & pass & 12 \\
+renamed & regenerate & budget & 10 \\
+renamed & regenerate & initial\_pass & 42 \\
+renamed & regenerate & max\_calls & 11 \\
+renamed & regenerate & pass & 17 \\
+renamed & repair & budget & 27 \\
+renamed & repair & initial\_pass & 42 \\
+renamed & repair & pass & 11 \\
+\bottomrule
+\end{tabular}
+\end{table}

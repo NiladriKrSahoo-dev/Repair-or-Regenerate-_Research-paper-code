@@ -1,0 +1,68 @@
+Python/greedy_methods/sliding_window.py::sliding_window original 0
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 58, in <module>
+    main()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 51, in main
+    tr = trajectory(pol, t["fn"], src, init, be, a.budget)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/policies.py", line 21, in trajectory
+    text, ti, to = backend.call(prompt)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 54, in call
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 7, in with_retry
+    try: return fn()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 54, in <lambda>
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
+    return self._post(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1360, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1133, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': "Request too large for model `qwen/qwen3.8-27b` in organization `org_01kxhkvxd2f48amsy9bv31pcjs` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1019. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing", 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Python/greedy_methods/sliding_window.py::sliding_window renamed 0
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 58, in <module>
+    main()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 51, in main
+    tr = trajectory(pol, t["fn"], src, init, be, a.budget)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/policies.py", line 21, in trajectory
+    text, ti, to = backend.call(prompt)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 54, in call
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 7, in with_retry
+    try: return fn()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 54, in <lambda>
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
+    return self._post(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1360, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1133, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': "Request too large for model `qwen/qwen3.8-27b` in organization `org_01kxhkvxd2f48amsy9bv31pcjs` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1500. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing", 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 58, in <module>
+    main()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 51, in main
+    tr = trajectory(pol, t["fn"], src, init, be, a.budget)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/policies.py", line 21, in trajectory
+    text, ti, to = backend.call(prompt)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 54, in call
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 7, in with_retry
+    try: return fn()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 54, in <lambda>
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
+    return self._post(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1360, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1133, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': "Request too large for model `qwen/qwen3.8-27b` in organization `org_01kxhkvxd2f48amsy9bv31pcjs` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1076. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing", 'type': 'tokens', 'code': 'rate_limit_exceeded'}}

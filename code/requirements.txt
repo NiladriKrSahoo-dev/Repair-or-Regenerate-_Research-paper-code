@@ -1,0 +1,6 @@
+pytest
+coverage
+scipy
+pandas
+google-genai
+anthropic   # only needed for --provider anthropic

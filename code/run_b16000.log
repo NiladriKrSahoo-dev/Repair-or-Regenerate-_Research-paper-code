@@ -1,0 +1,572 @@
+algorithms/algorithms/string/is_rotated.py::is_rotated_v1 original 0
+algorithms/algorithms/string/is_rotated.py::is_rotated_v1 original 1
+algorithms/algorithms/string/is_rotated.py::is_rotated_v1 renamed 0
+algorithms/algorithms/string/is_rotated.py::is_rotated_v1 renamed 1
+Python/ciphers/rail_fence_cipher.py::encrypt original 0
+Python/ciphers/rail_fence_cipher.py::encrypt original 1
+Python/ciphers/rail_fence_cipher.py::encrypt renamed 0
+Python/ciphers/rail_fence_cipher.py::encrypt renamed 1
+Python/maths/prime_sieve_eratosthenes.py::prime_sieve_eratosthenes original 0
+Python/maths/prime_sieve_eratosthenes.py::prime_sieve_eratosthenes original 1
+Python/maths/prime_sieve_eratosthenes.py::prime_sieve_eratosthenes renamed 0
+Python/maths/prime_sieve_eratosthenes.py::prime_sieve_eratosthenes renamed 1
+algorithms/algorithms/matrix/count_paths.py::count_paths original 0
+algorithms/algorithms/matrix/count_paths.py::count_paths original 1
+algorithms/algorithms/matrix/count_paths.py::count_paths renamed 0
+algorithms/algorithms/matrix/count_paths.py::count_paths renamed 1
+Python/project_euler/problem_135/sol1.py::solution original 0
+Python/project_euler/problem_135/sol1.py::solution original 1
+Python/project_euler/problem_135/sol1.py::solution renamed 0
+Python/project_euler/problem_135/sol1.py::solution renamed 1
+Python/dynamic_programming/minimum_cost_path.py::minimum_cost_path original 0
+Python/dynamic_programming/minimum_cost_path.py::minimum_cost_path original 1
+Python/dynamic_programming/minimum_cost_path.py::minimum_cost_path renamed 0
+Python/dynamic_programming/minimum_cost_path.py::minimum_cost_path renamed 1
+Python/hashes/luhn.py::is_luhn original 0
+Python/hashes/luhn.py::is_luhn original 1
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 61, in <module>
+    main()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 52, in main
+    tr = trajectory(pol, t["fn"], src, init, be, a.budget)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/policies.py", line 21, in trajectory
+    text, ti, to = backend.call(prompt)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in call
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 7, in with_retry
+    try: return fn()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in <lambda>
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
+    return self._post(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1360, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1133, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}
+Python/hashes/luhn.py::is_luhn renamed 0
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 61, in <module>
+    main()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 52, in main
+    tr = trajectory(pol, t["fn"], src, init, be, a.budget)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/policies.py", line 21, in trajectory
+    text, ti, to = backend.call(prompt)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in call
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 7, in with_retry
+    try: return fn()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in <lambda>
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
+    return self._post(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1360, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1133, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}
+Python/hashes/luhn.py::is_luhn renamed 1
+Python/sorts/bead_sort.py::bead_sort original 0
+Python/sorts/bead_sort.py::bead_sort original 1
+Python/sorts/bead_sort.py::bead_sort renamed 0
+Python/sorts/bead_sort.py::bead_sort renamed 1
+Python/maths/series/geometric_series.py::geometric_series original 0
+Python/maths/series/geometric_series.py::geometric_series original 1
+Python/maths/series/geometric_series.py::geometric_series renamed 0
+Python/maths/series/geometric_series.py::geometric_series renamed 1
+Python/project_euler/problem_065/sol1.py::sum_digits original 0
+Python/project_euler/problem_065/sol1.py::sum_digits original 1
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 61, in <module>
+    main()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 52, in main
+    tr = trajectory(pol, t["fn"], src, init, be, a.budget)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/policies.py", line 21, in trajectory
+    text, ti, to = backend.call(prompt)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in call
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 7, in with_retry
+    try: return fn()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in <lambda>
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
+    return self._post(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1360, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1133, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}
+Python/project_euler/problem_065/sol1.py::sum_digits renamed 0
+Python/project_euler/problem_065/sol1.py::sum_digits renamed 1
+Python/project_euler/problem_100/sol1.py::solution original 0
+Python/project_euler/problem_100/sol1.py::solution original 1
+Python/project_euler/problem_100/sol1.py::solution renamed 0
+Python/project_euler/problem_100/sol1.py::solution renamed 1
+algorithms/algorithms/linked_list/is_palindrome.py::is_palindrome original 0
+algorithms/algorithms/linked_list/is_palindrome.py::is_palindrome original 1
+algorithms/algorithms/linked_list/is_palindrome.py::is_palindrome renamed 0
+algorithms/algorithms/linked_list/is_palindrome.py::is_palindrome renamed 1
+Python/bit_manipulation/fast_walsh_hadamard_transform.py::fwht_and original 0
+Python/bit_manipulation/fast_walsh_hadamard_transform.py::fwht_and original 1
+Python/bit_manipulation/fast_walsh_hadamard_transform.py::fwht_and renamed 0
+Python/bit_manipulation/fast_walsh_hadamard_transform.py::fwht_and renamed 1
+Python/conversions/binary_to_decimal.py::bin_to_decimal original 0
+Python/conversions/binary_to_decimal.py::bin_to_decimal original 1
+Python/conversions/binary_to_decimal.py::bin_to_decimal renamed 0
+Python/conversions/binary_to_decimal.py::bin_to_decimal renamed 1
+Python/maths/special_numbers/armstrong_numbers.py::armstrong_number original 0
+Python/maths/special_numbers/armstrong_numbers.py::armstrong_number original 1
+Python/maths/special_numbers/armstrong_numbers.py::armstrong_number renamed 0
+Python/maths/special_numbers/armstrong_numbers.py::armstrong_number renamed 1
+Python/graphs/finding_bridges.py::compute_bridges original 0
+Python/graphs/finding_bridges.py::compute_bridges original 1
+Python/graphs/finding_bridges.py::compute_bridges renamed 0
+Python/graphs/finding_bridges.py::compute_bridges renamed 1
+Python/ciphers/diffie.py::find_primitive original 0
+Python/ciphers/diffie.py::find_primitive original 1
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 61, in <module>
+    main()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 52, in main
+    tr = trajectory(pol, t["fn"], src, init, be, a.budget)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/policies.py", line 21, in trajectory
+    text, ti, to = backend.call(prompt)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in call
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 7, in with_retry
+    try: return fn()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in <lambda>
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
+    return self._post(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1360, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1133, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}
+Python/ciphers/diffie.py::find_primitive renamed 0
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 61, in <module>
+    main()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 52, in main
+    tr = trajectory(pol, t["fn"], src, init, be, a.budget)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/policies.py", line 21, in trajectory
+    text, ti, to = backend.call(prompt)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in call
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 7, in with_retry
+    try: return fn()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in <lambda>
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
+    return self._post(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1360, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1133, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}
+Python/ciphers/diffie.py::find_primitive renamed 1
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 61, in <module>
+    main()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 48, in main
+    text, ti, to = be.call(GEN.format(fn=t["fn"], src=src))
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in call
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 7, in with_retry
+    try: return fn()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in <lambda>
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
+    return self._post(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1360, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1133, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}
+algorithms/algorithms/dynamic_programming/longest_increasing.py::longest_increasing_subsequence_optimized2 original 0
+algorithms/algorithms/dynamic_programming/longest_increasing.py::longest_increasing_subsequence_optimized2 original 1
+algorithms/algorithms/dynamic_programming/longest_increasing.py::longest_increasing_subsequence_optimized2 renamed 0
+algorithms/algorithms/dynamic_programming/longest_increasing.py::longest_increasing_subsequence_optimized2 renamed 1
+toolz/toolz/_signatures.py::check_valid original 0
+toolz/toolz/_signatures.py::check_valid original 1
+toolz/toolz/_signatures.py::check_valid renamed 0
+toolz/toolz/_signatures.py::check_valid renamed 1
+algorithms/algorithms/linked_list/is_sorted.py::is_sorted original 0
+algorithms/algorithms/linked_list/is_sorted.py::is_sorted original 1
+algorithms/algorithms/linked_list/is_sorted.py::is_sorted renamed 0
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 61, in <module>
+    main()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 52, in main
+    tr = trajectory(pol, t["fn"], src, init, be, a.budget)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/policies.py", line 21, in trajectory
+    text, ti, to = backend.call(prompt)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in call
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 7, in with_retry
+    try: return fn()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in <lambda>
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
+    return self._post(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1360, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1133, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}
+algorithms/algorithms/linked_list/is_sorted.py::is_sorted renamed 1
+Python/divide_and_conquer/mergesort.py::merge original 0
+Python/divide_and_conquer/mergesort.py::merge original 1
+Python/divide_and_conquer/mergesort.py::merge renamed 0
+Python/divide_and_conquer/mergesort.py::merge renamed 1
+Python/dynamic_programming/narcissistic_number.py::find_narcissistic_numbers original 0
+Python/dynamic_programming/narcissistic_number.py::find_narcissistic_numbers original 1
+Python/dynamic_programming/narcissistic_number.py::find_narcissistic_numbers renamed 0
+Python/dynamic_programming/narcissistic_number.py::find_narcissistic_numbers renamed 1
+Python/data_structures/arrays/merge_sorted.py::merge_sorted_arrays original 0
+Python/data_structures/arrays/merge_sorted.py::merge_sorted_arrays original 1
+Python/data_structures/arrays/merge_sorted.py::merge_sorted_arrays renamed 0
+Python/data_structures/arrays/merge_sorted.py::merge_sorted_arrays renamed 1
+Python/searches/sentinel_linear_search.py::sentinel_linear_search original 0
+Python/searches/sentinel_linear_search.py::sentinel_linear_search original 1
+Python/searches/sentinel_linear_search.py::sentinel_linear_search renamed 0
+Python/searches/sentinel_linear_search.py::sentinel_linear_search renamed 1
+algorithms/algorithms/backtracking/array_sum_combinations.py::array_sum_combinations original 0
+algorithms/algorithms/backtracking/array_sum_combinations.py::array_sum_combinations original 1
+algorithms/algorithms/backtracking/array_sum_combinations.py::array_sum_combinations renamed 0
+algorithms/algorithms/backtracking/array_sum_combinations.py::array_sum_combinations renamed 1
+Python/bit_manipulation/next_power_of_two.py::next_power_of_two original 0
+Python/bit_manipulation/next_power_of_two.py::next_power_of_two original 1
+Python/bit_manipulation/next_power_of_two.py::next_power_of_two renamed 0
+Python/bit_manipulation/next_power_of_two.py::next_power_of_two renamed 1
+Python/project_euler/problem_023/sol1.py::solution original 0
+Python/project_euler/problem_023/sol1.py::solution original 1
+Python/project_euler/problem_023/sol1.py::solution renamed 0
+Python/project_euler/problem_023/sol1.py::solution renamed 1
+Python/graphs/minimum_spanning_tree_kruskal.py::kruskal original 0
+Python/graphs/minimum_spanning_tree_kruskal.py::kruskal original 1
+Python/graphs/minimum_spanning_tree_kruskal.py::kruskal renamed 0
+Python/graphs/minimum_spanning_tree_kruskal.py::kruskal renamed 1
+Python/divide_and_conquer/inversions.py::_count_cross_inversions original 0
+Python/divide_and_conquer/inversions.py::_count_cross_inversions original 1
+Python/divide_and_conquer/inversions.py::_count_cross_inversions renamed 0
+Python/divide_and_conquer/inversions.py::_count_cross_inversions renamed 1
+Python/conversions/decimal_to_binary.py::decimal_to_binary_iterative original 0
+Python/conversions/decimal_to_binary.py::decimal_to_binary_iterative original 1
+Python/conversions/decimal_to_binary.py::decimal_to_binary_iterative renamed 0
+Python/conversions/decimal_to_binary.py::decimal_to_binary_iterative renamed 1
+algorithms/algorithms/dynamic_programming/word_break.py::word_break original 0
+algorithms/algorithms/dynamic_programming/word_break.py::word_break original 1
+algorithms/algorithms/dynamic_programming/word_break.py::word_break renamed 0
+algorithms/algorithms/dynamic_programming/word_break.py::word_break renamed 1
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 61, in <module>
+    main()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 52, in main
+    tr = trajectory(pol, t["fn"], src, init, be, a.budget)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/policies.py", line 21, in trajectory
+    text, ti, to = backend.call(prompt)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in call
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 7, in with_retry
+    try: return fn()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in <lambda>
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
+    return self._post(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1360, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1133, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}
+Python/maths/primelib.py::fib original 0
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_backends/sync.py", line 215, in connect_tcp
+    sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1065, in request
+    response = self._send_request(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_client.py", line 483, in _send_request
+    response = self._send_with_auth_retry(request, stream=stream, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_client.py", line 461, in _send_with_auth_retry
+    response = super()._send_request(request, stream=stream, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 990, in _send_request
+    return self._client.send(request, stream=stream, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 61, in <module>
+    main()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 48, in main
+    text, ti, to = be.call(GEN.format(fn=t["fn"], src=src))
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in call
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 7, in with_retry
+    try: return fn()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in <lambda>
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
+    return self._post(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1360, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1083, in request
+    raise APITimeoutError(request=request) from err
+openai.APITimeoutError: Request timed out.
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_backends/sync.py", line 215, in connect_tcp
+    sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1065, in request
+    response = self._send_request(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_client.py", line 483, in _send_request
+    response = self._send_with_auth_retry(request, stream=stream, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_client.py", line 461, in _send_with_auth_retry
+    response = super()._send_request(request, stream=stream, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 990, in _send_request
+    return self._client.send(request, stream=stream, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 61, in <module>
+    main()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 48, in main
+    text, ti, to = be.call(GEN.format(fn=t["fn"], src=src))
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in call
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 7, in with_retry
+    try: return fn()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in <lambda>
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
+    return self._post(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1360, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1100, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_backends/sync.py", line 215, in connect_tcp
+    sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1065, in request
+    response = self._send_request(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_client.py", line 483, in _send_request
+    response = self._send_with_auth_retry(request, stream=stream, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_client.py", line 461, in _send_with_auth_retry
+    response = super()._send_request(request, stream=stream, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 990, in _send_request
+    return self._client.send(request, stream=stream, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 61, in <module>
+    main()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 48, in main
+    text, ti, to = be.call(GEN.format(fn=t["fn"], src=src))
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in call
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 7, in with_retry
+    try: return fn()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in <lambda>
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
+    return self._post(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1360, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1100, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+Python/maths/primelib.py::fib original 1
+Python/maths/primelib.py::fib renamed 0
+Python/maths/primelib.py::fib renamed 1
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 61, in <module>
+    main()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 52, in main
+    tr = trajectory(pol, t["fn"], src, init, be, a.budget)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/policies.py", line 21, in trajectory
+    text, ti, to = backend.call(prompt)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in call
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 7, in with_retry
+    try: return fn()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 59, in <lambda>
+    r = with_retry(lambda: self.client.chat.completions.create(model=self.model, temperature=self.temperature,
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1284, in create
+    return self._post(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1360, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1133, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'status': 429, 'title': 'Too Many Requests'}
+Python/maths/special_numbers/perfect_number.py::perfect original 0
+Python/maths/special_numbers/perfect_number.py::perfect original 1
+Python/maths/special_numbers/perfect_number.py::perfect renamed 0
+Python/maths/special_numbers/perfect_number.py::perfect renamed 1
+Python/maths/modular_exponential.py::modular_exponential original 0
+Python/maths/modular_exponential.py::modular_exponential original 1
+Python/maths/modular_exponential.py::modular_exponential renamed 0
+Python/maths/modular_exponential.py::modular_exponential renamed 1
+Python/project_euler/problem_025/sol1.py::fibonacci original 0
+Python/project_euler/problem_025/sol1.py::fibonacci original 1
+Python/project_euler/problem_025/sol1.py::fibonacci renamed 0
+Python/project_euler/problem_025/sol1.py::fibonacci renamed 1
+algorithms/algorithms/array/longest_non_repeat.py::get_longest_non_repeat_v2 original 0
+algorithms/algorithms/array/longest_non_repeat.py::get_longest_non_repeat_v2 original 1
+algorithms/algorithms/array/longest_non_repeat.py::get_longest_non_repeat_v2 renamed 0
+algorithms/algorithms/array/longest_non_repeat.py::get_longest_non_repeat_v2 renamed 1
+algorithms/algorithms/bit_manipulation/binary_gap.py::binary_gap original 0
+algorithms/algorithms/bit_manipulation/binary_gap.py::binary_gap original 1
+algorithms/algorithms/bit_manipulation/binary_gap.py::binary_gap renamed 0
+algorithms/algorithms/bit_manipulation/binary_gap.py::binary_gap renamed 1
+Python/project_euler/problem_122/sol1.py::solve original 0
+Python/project_euler/problem_122/sol1.py::solve original 1
+Python/project_euler/problem_122/sol1.py::solve renamed 0
+Python/project_euler/problem_122/sol1.py::solve renamed 1
+Python/project_euler/problem_164/sol1.py::solve original 0
+Python/project_euler/problem_164/sol1.py::solve original 1
+Python/project_euler/problem_164/sol1.py::solve renamed 0
+Python/project_euler/problem_164/sol1.py::solve renamed 1
+Python/maths/tonelli_shanks.py::legendre_symbol original 0
+Python/maths/tonelli_shanks.py::legendre_symbol original 1
+Python/maths/tonelli_shanks.py::legendre_symbol renamed 0
+Python/maths/tonelli_shanks.py::legendre_symbol renamed 1

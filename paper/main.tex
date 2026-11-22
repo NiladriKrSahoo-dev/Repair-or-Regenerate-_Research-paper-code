@@ -1,0 +1,119 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+% ---- Results plumbing: compiles before experiments exist (placeholders in bold), then fills automatically ----
+\IfFileExists{results/numbers.tex}{\input{results/numbers.tex}}{}
+\input{results/defaults.tex}
+\newcommand{\todo}[1]{{\color{red}\textbf{[TODO: #1]}}}
+\newcommand{\IfResults}[2]{\IfFileExists{results/tables.tex}{#1}{#2}}
+
+\title{Repair or Regenerate? A Token-Budget-Matched Comparison of Execution-Feedback Repair and Fresh Regeneration for LLM-Generated Python Unit Tests}
+\author{Niladri \quad \todo{co-authors / advisor / affiliation}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Systems that generate unit tests with large language models (LLMs) commonly feed execution failures back to the model and ask it to repair the test. Iteration, however, spends more tokens than a single attempt, so a repair pipeline may look stronger simply because it is given more resources, or because a fresh attempt would have done as well. We compare execution-feedback \emph{repair} with independent \emph{regeneration} under an identical total-token allowance. Both policies start from the same initial candidate, and stopping depends only on visible pass/fail status, never on coverage or mutation outcomes. We evaluate executability, validity, branch coverage, and mutation score on \nTasks{} Python functions, each run with three repetitions, on original and on locally-renamed source. On original code, the mean mutation-score difference (repair minus regeneration) was \msDiffOrig{} (95\% CI \msCIOrig); on renamed code it was \msDiffRen{} (95\% CI \msCIRen). \todo{add one sentence stating the direction of the finding once results exist; do not claim more than the intervals support.} We release the pipeline, task list, and raw trajectories.
+\end{abstract}
+
+\section{Introduction}
+Large language models can write unit tests, but a test that runs is not necessarily a test that checks anything: generated assertions can be weak even when coverage is high~\citep{schafer2024testpilot}. A common remedy is execution feedback. TestPilot returns failing tests and their error messages to the model for repair~\citep{schafer2024testpilot}, ChatUniTest follows a generate--validate--repair loop~\citep{chen2024chatunitest}, and industrial pipelines filter candidates through build, reliability, and improvement stages~\citep{alshahwan2024testgenllm}.
+
+These loops are rarely compared against the obvious alternative: spend the same tokens on a fresh, independent attempt. If a repair pipeline makes several model calls and a one-shot baseline makes one, any gain confounds \emph{feedback} with \emph{extra opportunities}. Prior work isolates parts of this question---for example, comparing at comparable numbers of model calls~\citep{konstantinou2025yate}, or auditing feedback against equal-budget resampling in algorithmic test generation~\citep{liang2026auditing}---but, to our knowledge, there is no controlled comparison of repair and regeneration under a matched \emph{token} allowance for repository-style Python functions. \todo{verify this novelty claim against the closest studies before submission; see RUNBOOK.md.}
+
+We therefore ask whether execution-feedback repair offers benefits beyond an equally funded fresh attempt. We do not assume repair must win.
+
+\paragraph{Contributions.}
+\begin{itemize}[leftmargin=*,nosep]
+  \item A paired, budget-matched protocol in which both policies share one initial candidate and the same token rule, and in which hidden outcomes never influence generation or stopping.
+  \item An evaluation separating executability, validity, branch coverage, and mutation score, reported both over all attempts and conditional on valid suites.
+  \item A robustness extension that renames local variables with a transformation verified to be an alpha-equivalent renaming.
+  \item An open pipeline, frozen task list, and per-trajectory logs.
+\end{itemize}
+
+\section{Background and Related Work}
+\paragraph{LLM-based unit test generation and repair.} TestPilot, ChatUniTest and Meta's TestGen-LLM established generation with validation and repair or filtering~\citep{schafer2024testpilot,chen2024chatunitest,alshahwan2024testgenllm}. YATE studies the role of test repair and reports gains at comparable numbers of model calls, a different constraint from total tokens~\citep{konstantinou2025yate}. \todo{add further related work only after verifying each citation exists; the earlier markdown draft cites many 2025--2026 papers that were not verified.}
+
+\paragraph{Feedback versus extra attempts.} Liang et al.\ audit feedback-driven evolution in LLM test generation under the oracle problem, comparing against equal-budget resampling~\citep{liang2026auditing}. Their setting is algorithmic test generation; whether the conclusion transfers to Python function-level repair is the open question we target.
+
+\paragraph{Benchmarks.} ULT provides real-world Python functions for test generation~\citep{huang2026ult}. \todo{state which ULT release/version and licence you used.}
+
+\paragraph{Mutation analysis.} Mutation testing measures a suite's ability to detect seeded faults~\citep{jia2011mutation}. Mutants can correlate with real faults~\citep{just2014mutants}, but later work finds the relation weaker once suite size is controlled~\citep{papadakis2018correlated}; we therefore treat mutation score as a proxy, not as real-fault detection.
+
+\section{Study Design}
+\subsection{Research questions}
+\begin{description}[leftmargin=*,nosep]
+  \item[RQ1] Under a matched token allowance, does repair achieve a higher mutation score than regeneration?
+  \item[RQ2] How do the policies differ in executability, validity, and branch coverage?
+  \item[RQ3] How do they differ in tokens and model calls actually consumed?
+  \item[RQ4] Does local-variable renaming change either policy's effectiveness, or their relative ranking?
+\end{description}
+
+\subsection{Tasks}
+Tasks were drawn from ULT~\citep{huang2026ult} by a deterministic, outcome-blind filter run before any model call (\texttt{select\_tasks.py}). A function was eligible if it parsed; was the only top-level function; used only standard-library imports and no I/O, network, randomness, time, or global state; had at least one local variable and one branch construct; passed the renaming verification below; and yielded at least three mutants. We drew \nTasks{} eligible functions with a fixed seed. The exclusion counts and selected identifiers are in \texttt{selection\_log.json}. \todo{insert counts: input functions, eligible, exclusions by reason.}
+
+\subsection{Generation, policies, and the token rule}
+All calls used model \modelId{} with temperature 1.0 and at most 1500 output tokens. \todo{state provider, model version, date of the runs, and whether reasoning/thinking was disabled.} The initial prompt gives the function source and requests one pytest file. The initial candidate is generated once per (function, condition, repetition) and shared by both policies; its tokens are charged to both.
+
+If the initial candidate passes all of its own tests, both policies stop and are identical. Otherwise they differ:
+\begin{itemize}[leftmargin=*,nosep]
+  \item \textbf{Repair} sends the function, the previous test file, and the last 2000 characters of the pytest output, and asks for a corrected file.
+  \item \textbf{Regeneration} resends the initial prompt only, with no previous candidate and no error text.
+\end{itemize}
+Both continue until a candidate passes, the budget would be exceeded, or ten calls have been made. A call is made only if $\text{used} + \widehat{\text{in}} + \text{max\_out} \le B$, where $\widehat{\text{in}}$ is the prompt length in characters divided by three and $B=\budgetTokens$ tokens; reported usage is the provider's input plus output token count, including any hidden reasoning tokens. The returned suite is the first passing candidate, else the last one. Stopping uses only pass/fail on the candidate's own tests. Coverage and mutation results are computed afterwards and never fed back.
+
+\subsection{Outcomes}
+\emph{Executable}: pytest exits with code 0 or 1 (collection and import succeed). \emph{Valid}: all tests pass on the original function. \emph{Branch coverage}: coverage.py branch coverage of the function's module. \emph{Mutation score}: killed over eligible mutants, computed only for valid suites. Mutants come from our AST operators (comparison, arithmetic, boolean-operator, constant increment, condition negation, return-to-\texttt{None}), are generated once per task and condition, and are cached so both policies face the identical pool. A mutant is \emph{killed} if the suite fails on it; mutants that do not compile or fail to import are \emph{invalid}; timeouts are reported separately; surviving mutants are not filtered for equivalence. In the all-attempt analysis, an invalid, non-executable or unusable suite scores zero; the conditional analysis uses valid suites only and reports its denominator.
+
+\subsection{Renaming condition}
+For RQ4 we rename local variables (not arguments, globals, attributes, or called names) to \texttt{v1\_}, \texttt{v2\_}, \ldots\ in order of first assignment. Before use we verify that no new name collides with an existing identifier and that canonically renaming locals in both versions yields identical ASTs, i.e.\ that the transformation is a pure alpha-renaming. This is a structural guarantee, not a test of behavior on inputs.
+
+\subsection{Analysis}
+Repetitions are averaged within a function; analysis is paired across functions. We report the mean paired difference (repair minus regeneration) with a 95\% percentile-bootstrap interval (10{,}000 resamples over functions) and a two-sided Wilcoxon signed-rank $p$-value; we emphasize effect sizes and intervals over significance. We also report the subset of runs whose initial candidate failed, since only those can differ. No correction is applied across the secondary measures, which are exploratory. All code is in \texttt{rr\_pipeline/}.
+
+\section{Results}
+Across \nTasks{} functions, the shared initial candidate passed validation in \initPassRate\% of runs; the remaining runs are the only ones in which the policies can differ (\nInitFailOrig{} original, \nInitFailRen{} renamed).
+
+\IfResults{
+  \subsection*{RQ1--RQ3: repair versus regeneration}
+  On original code, mean all-attempt mutation score was \msRepairOrig{} for repair and \msRegenOrig{} for regeneration ($\Delta=\msDiffOrig$, 95\% CI \msCIOrig, $p=\msPOrig$); on renamed code, \msRepairRen{} versus \msRegenRen{} ($\Delta=\msDiffRen$, 95\% CI \msCIRen, $p=\msPRen$). Tables~\ref{tab:main-original} and~\ref{tab:main-renamed} give all measures, and Tables~\ref{tab:fail-original}--\ref{tab:fail-renamed} the initial-failure subset.
+  \input{results/tables.tex}
+  \subsection*{RQ4: renaming}
+  Table~\ref{tab:rename} reports the paired effect of renaming for each policy. \todo{one neutral sentence per policy stating the estimate and interval.}
+}{
+  \todo{Run the experiments (see RUNBOOK.md), then \texttt{python analyze.py runs.jsonl --latex ../paper/results}; this section fills in automatically.}
+}
+
+\section{Discussion}
+\todo{Keep exactly ONE of the three paragraphs below, matching what the intervals show, and delete the rest.}
+
+\paragraph{If repair is better (interval excludes zero, favoring repair).} Under equal tokens, feeding failures back produced higher mutation scores than a fresh attempt, supporting the view that error text carries useful information beyond a second sample. This applies to the functions, model and budget studied; we did not test other budgets or models.
+
+\paragraph{If the two are indistinguishable (interval includes zero).} We found no evidence that execution feedback beats an equally funded fresh attempt. With \nTasks{} functions the study can detect only large differences (the paired standard deviation implies roughly \nNeededOrig{} functions to resolve the observed effect at 80\% power), so this is inconclusive rather than evidence of equivalence. The practical reading is that regeneration is a competitive, simpler baseline that repair pipelines should be compared against.
+
+\paragraph{If regeneration is better (interval excludes zero, favoring regeneration).} A fresh attempt outperformed repair at equal tokens. Plausible explanations, which we did not test, are that error-conditioned edits anchor the model to a flawed initial test, and that repair prompts carry more input tokens, leaving room for fewer attempts.
+
+\section{Threats to Validity}
+\textbf{Internal.} Both policies share an initial candidate, but sampling at temperature 1.0 makes trajectories stochastic; three repetitions reduce but do not remove this. The token rule uses an estimate for input size before each call. \textbf{Construct.} Mutation score is a proxy for fault detection~\citep{just2014mutants,papadakis2018correlated}; our mutants are not equivalence-filtered, which biases scores downward equally for both policies; our operator set is smaller than mature tools such as Cosmic Ray~\citep{cosmicray}. Equal token allowances are not equal monetary or compute cost. \textbf{External.} One model, one budget, function-level scope, standard-library-only functions, and a small sample limit generalization. Benchmarks released publicly may overlap with model training data. Renaming is verified structurally, not behaviorally. Readability and maintainability of the tests were not evaluated.
+
+\section{Conclusion}
+\todo{two sentences restating the measured outcome and its scope; no claim beyond the intervals.}
+
+\section*{Data and Code Availability}
+Pipeline, frozen task list, mutant pools, prompts, and trajectories: \todo{repository URL}.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

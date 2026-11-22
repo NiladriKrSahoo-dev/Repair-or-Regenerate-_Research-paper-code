@@ -1,0 +1,22 @@
+/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Traceback (most recent call last):
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 61, in <module>
+    main()
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 47, in main
+    be = mk(hash((t["id"], cond, rep)) % 10**6)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/run_experiment.py", line 35, in <lambda>
+    from llm import GeminiBackend; mk = lambda s: GeminiBackend(a.model, a.temperature, thinking_budget=a.thinking_budget)
+  File "/Users/niladrisahoo/Downloads/rr_experiment_kit/code/llm.py", line 31, in __init__
+    self.types, self.client = types, genai.Client()
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/google/genai/client.py", line 265, in __init__
+    self._api_client = self._get_api_client(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/google/genai/client.py", line 311, in _get_api_client
+    return BaseApiClient(
+  File "/Users/niladrisahoo/Library/Python/3.9/lib/python/site-packages/google/genai/_api_client.py", line 676, in __init__
+    raise ValueError(
+ValueError: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.

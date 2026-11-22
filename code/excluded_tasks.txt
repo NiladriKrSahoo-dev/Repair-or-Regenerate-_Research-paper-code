@@ -1,0 +1,4 @@
+algorithms/algorithms/linked_list/is_palindrome.py::is_palindrome
+Python/ciphers/diffie.py::find_primitive
+algorithms/algorithms/linked_list/is_sorted.py::is_sorted
+algorithms/algorithms/backtracking/array_sum_combinations.py::array_sum_combinations

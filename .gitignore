@@ -1,0 +1,27 @@
+# Environment variables and secrets (NEVER commit keys)
+.env
+*.env
+.env*
+code/.env
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Third-party cloned source repositories
+repos/
+
+# LaTeX build temp files
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
+paper/*.toc
+paper/*.fls
+paper/*.fdb_latexmk

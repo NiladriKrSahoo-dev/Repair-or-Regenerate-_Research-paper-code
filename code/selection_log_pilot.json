@@ -1,0 +1,36 @@
+{
+ "seed": 2026,
+ "n_input": 3600,
+ "n_eligible": 727,
+ "exclusions": {
+  "not_self_contained": 2078,
+  "too_few_mutants": 152,
+  "no_locals": 292,
+  "banned_call": 205,
+  "non_stdlib_or_banned_import": 16,
+  "no_branches": 117,
+  "global_or_async": 13
+ },
+ "selected": [
+  "Python/greedy_methods/sliding_window.py::sliding_window",
+  "algorithms/algorithms/linked_list/is_palindrome.py::is_palindrome_dict",
+  "algorithms/algorithms/array/three_sum.py::three_sum",
+  "Python/maths/minkowski_distance.py::minkowski_distance",
+  "algorithms/algorithms/math/next_bigger.py::next_bigger",
+  "Python/data_structures/stacks/postfix_to_infix_conversion.py::postfix_to_infix",
+  "toolz/toolz/_signatures.py::get_exclude_keywords",
+  "Python/dynamic_programming/max_non_adjacent_sum.py::maximum_non_adjacent_sum",
+  "Python/conversions/excel_title_to_column.py::excel_title_to_column",
+  "Python/strings/bpe_tokenizer.py::merge",
+  "Python/dynamic_programming/longest_increasing_subsequence_o_nlogn.py::ceil_index",
+  "algorithms/algorithms/array/longest_non_repeat.py::longest_non_repeat_v1",
+  "Python/maths/special_numbers/spy_number.py::is_spy_number",
+  "Python/dynamic_programming/minimum_coin_change.py::dp_count",
+  "algorithms/algorithms/sorting/wiggle_sort.py::wiggle_sort",
+  "Python/maths/modular_division.py::extended_euclid",
+  "Python/dynamic_programming/all_construct.py::all_construct",
+  "algorithms/algorithms/sorting/insertion_sort.py::insertion_sort",
+  "algorithms/algorithms/dynamic_programming/coin_change.py::count",
+  "Python/maths/padovan_sequence.py::padovan_sequence"
+ ]
+}

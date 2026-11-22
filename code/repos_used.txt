@@ -1,0 +1,10 @@
+# Repos used in rr_experiment_kit task pool
+# Cloned with: git clone --depth 1
+# Recorded: 2026-10-31
+
+keon/algorithms bd1d152f9ec7331c69be662831610b003b10fc7a https://github.com/keon/algorithms.git
+TheAlgorithms/Python 6e03a48579ca212a08b36be00378f887dc41a003 https://github.com/TheAlgorithms/Python.git
+jmoiron/humanize 87dfb1c03f206f01bb9b597b1e290d72f467df9a https://github.com/jmoiron/humanize.git
+pytoolz/toolz 451af60dec590a6010e2babdbf391ea8f815122f https://github.com/pytoolz/toolz.git
+martinblech/xmltodict 6e29fba282e68631034dd2722a413b4e35276584 https://github.com/martinblech/xmltodict.git
+

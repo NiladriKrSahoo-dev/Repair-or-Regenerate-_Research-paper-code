@@ -1,0 +1,2 @@
+{"id": "smoke_add", "fn": "add_clamped", "source": "def add_clamped(a, b):\n    total = a + b\n    if total > 10:\n        total = 10\n    return total\n"}
+{"id": "smoke_max", "fn": "pick_larger", "source": "def pick_larger(a, b):\n    best = a\n    if b > a:\n        best = b\n    return best\n"}
